@@ -169,7 +169,7 @@ const DepartmentList = () => {
             variant="contained"
             color="primary"
             component={NavLink}
-            to="/employees/add"
+            to="/departments/add"
           >
             Add Department
           </Button>
