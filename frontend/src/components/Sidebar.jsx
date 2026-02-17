@@ -1,6 +1,7 @@
 import React, { useContext } from "react";
 import { NavLink, useNavigate } from "react-router-dom";
 import AuthContext from "../context/AuthContext";
+import ThemeContext from "../context/ThemeContext";
 import {
   Drawer,
   List,
@@ -12,6 +13,8 @@ import {
   Box,
   Divider,
   Button,
+  Switch,
+  FormControlLabel,
 } from "@mui/material";
 import DashboardIcon from "@mui/icons-material/Dashboard";
 import PeopleIcon from "@mui/icons-material/People";
@@ -27,6 +30,8 @@ const Sidebar = () => {
   ];
 
   const { logout, user } = useContext(AuthContext);
+  const { mode, toggleTheme } = useContext(ThemeContext);
+
   const navigate = useNavigate();
 
   const handleLogout = () => {
@@ -43,7 +48,7 @@ const Sidebar = () => {
         [`& .MuiDrawer-paper`]: {
           width: drawerWidth,
           boxSizing: "border-box",
-          backgroundColor: "#f8fafc",
+          backgroundColor: "background.paper",
         },
       }}
     >
@@ -80,16 +85,15 @@ const Sidebar = () => {
                     backgroundColor: "action.selected",
                     borderLeft: "4px solid",
                     borderColor: "primary.main",
-                    fontWeight: 600,
+                    "& .MuiListItemIcon-root": {
+                      color: "primary.main",
+                    },
+                    "& .MuiListItemText-primary": {
+                      fontWeight: 600,
+                    },
                   },
                   "&:hover": {
                     backgroundColor: "action.hover",
-                  },
-                  "& .MuiListItemIcon-root": {
-                    color: "primary.main",
-                  },
-                  "& .MuiListItemText-primary": {
-                    fontWeight: 600,
                   },
                 }}
               >
@@ -99,6 +103,13 @@ const Sidebar = () => {
             ))}
           </List>
         </Box>
+      </Box>
+
+      <Box sx={{ p: 2 }}>
+        <FormControlLabel
+          control={<Switch checked={mode === "dark"} onChange={toggleTheme} />}
+          label="Dark Mode"
+        />
       </Box>
 
       <Divider />

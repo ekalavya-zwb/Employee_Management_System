@@ -195,7 +195,7 @@ const AddEmployee = () => {
       >
         {step === 1 && (
           <>
-            <Typography variant="h4" gutterBottom align="center">
+            <Typography variant="h5" fontWeight={600} gutterBottom>
               Step 1: Personal Info
             </Typography>
 
@@ -206,6 +206,7 @@ const AddEmployee = () => {
               onChange={handleInputs}
               fullWidth
               margin="normal"
+              autoFocus
             />
             {formError.first_name && (
               <Alert severity="error" variant="standard">
@@ -249,9 +250,12 @@ const AddEmployee = () => {
                 mt: 2,
               }}
             >
-              <Button variant="contained" sx={{ flex: 1 }} onClick={prevStep}>
-                Back
-              </Button>
+              {step > 1 && (
+                <Button variant="contained" sx={{ flex: 1 }} onClick={prevStep}>
+                  Back
+                </Button>
+              )}
+
               <Button
                 variant="contained"
                 sx={{ flex: 1 }}
@@ -266,7 +270,7 @@ const AddEmployee = () => {
 
         {step === 2 && (
           <>
-            <Typography variant="h4" gutterBottom align="center">
+            <Typography variant="h5" fontWeight={600} gutterBottom>
               Step 2: Employment Info
             </Typography>
 
@@ -279,6 +283,7 @@ const AddEmployee = () => {
               fullWidth
               margin="normal"
               InputLabelProps={{ shrink: true }}
+              autoFocus
             />
             {formError.hire_date && (
               <Alert severity="error" variant="standard">
@@ -361,8 +366,17 @@ const AddEmployee = () => {
 
         {step === 3 && (
           <>
-            <Card sx={{ maxWidth: 600, mx: "auto", p: 3 }}>
-              <Typography variant="h4" gutterBottom align="center">
+            <Card
+              sx={{
+                maxWidth: 600,
+                mx: "auto",
+                p: 3,
+                borderRadius: 3,
+                border: "1px solid",
+                borderColor: "divider",
+              }}
+            >
+              <Typography variant="h5" fontWeight={600} gutterBottom>
                 Step 3: Review & Submit
               </Typography>
 
@@ -409,7 +423,7 @@ const AddEmployee = () => {
           </>
         )}
 
-        <Typography color="textPrimary" align="center" mt={2}>
+        <Typography color="text.secondary" align="center" mt={2}>
           Step {step} of 3
         </Typography>
       </Box>

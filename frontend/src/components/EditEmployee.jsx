@@ -196,7 +196,7 @@ const EditEmployee = () => {
         onSubmit={handleUpdateUser}
         sx={{ maxWidth: 500, mx: "auto" }}
       >
-        <Typography variant="h4" align="center" gutterBottom>
+        <Typography variant="h5" fontWeight={600} gutterBottom>
           Edit Employee
         </Typography>
 

@@ -128,7 +128,7 @@ const EditDepartment = () => {
         onSubmit={handleUpdateDepartment}
         sx={{ maxWidth: 500, mx: "auto" }}
       >
-        <Typography variant="h4" align="center" gutterBottom>
+        <Typography variant="h5" fontWeight={600} gutterBottom>
           Edit Department
         </Typography>
 

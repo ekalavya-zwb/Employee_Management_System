@@ -9,7 +9,7 @@ const PageNotFound = () => {
     <>
       <Box
         sx={{
-          minHeight: "85vh",
+          minHeight: "90vh",
           display: "flex",
           justifyContent: "center",
           alignItems: "center",

@@ -255,6 +255,8 @@ const DepartmentList = () => {
           sx={{
             borderRadius: 2,
             overflow: "hidden",
+            border: "1px solid",
+            borderColor: "divider",
           }}
         >
           <Table
@@ -262,17 +264,17 @@ const DepartmentList = () => {
             sx={{
               "& th": {
                 fontWeight: 600,
-                backgroundColor: "#f9fafb",
+                backgroundColor: "action.hover",
               },
               "& td, & th": {
-                borderBottom: "1px solid #eee",
+                borderBottom: (theme) => `1px solid ${theme.palette.divider}`,
                 textAlign: "center",
               },
               "& tr:last-child td": {
                 borderBottom: "none",
               },
               "& tbody tr:hover": {
-                backgroundColor: "#f5f5f5",
+                backgroundColor: "action.hover",
               },
             }}
           >

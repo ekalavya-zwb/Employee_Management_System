@@ -68,8 +68,17 @@ const EmployeeDetail = () => {
 
   return (
     <>
-      <Card sx={{ maxWidth: 500, mx: "auto", p: 3 }}>
-        <Typography variant="h4" gutterBottom align="center">
+      <Card
+        sx={{
+          maxWidth: 500,
+          mx: "auto",
+          p: 3,
+          borderRadius: 3,
+          border: "1px solid",
+          borderColor: "divider",
+        }}
+      >
+        <Typography variant="h5" fontWeight={600} align="center" gutterBottom>
           Employee Details
         </Typography>
 
@@ -97,14 +106,7 @@ const EmployeeDetail = () => {
           component={NavLink}
           to={`/employees/assign/${data.id}`}
           disabled={data.state !== "ACTIVE"}
-          sx={{
-            mt: 2,
-            "&.Mui-disabled": {
-              backgroundColor: "#90caf9",
-              color: "#fff",
-              opacity: 1,
-            },
-          }}
+          sx={{ mt: 2 }}
         >
           {data.state !== "ACTIVE"
             ? `Employee is ${data.state}`

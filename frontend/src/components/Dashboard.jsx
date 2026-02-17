@@ -103,10 +103,12 @@ const Dashboard = () => {
                   p: 3,
                   borderRadius: 4,
                   textAlign: "center",
-                  backgroundColor: "grey.100",
+                  border: (theme) => `1px solid ${theme.palette.divider}`,
                 }}
               >
-                <Typography variant="subtitle2">{item.label}</Typography>
+                <Typography variant="subtitle2" color="text.secondary">
+                  {item.label}
+                </Typography>
 
                 <Typography variant="h4" fontWeight={700} mt={1}>
                   {item.value}

@@ -11,7 +11,6 @@ const StatsSection = ({ title, stats }) => {
         borderRadius: 4,
         border: "1px solid",
         borderColor: "divider",
-        backgroundColor: "grey.50",
       }}
     >
       <Typography variant="h6" fontWeight={600} mb={3}>
@@ -25,8 +24,10 @@ const StatsSection = ({ title, stats }) => {
               sx={{
                 p: 2,
                 borderRadius: 3,
-                backgroundColor: "grey.50",
+                backgroundColor: "action.hover",
                 textAlign: "center",
+                border: "1px solid",
+                borderColor: "divider",
               }}
             >
               <Typography variant="body2" color="text.secondary">

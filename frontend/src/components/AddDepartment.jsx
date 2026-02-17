@@ -83,7 +83,7 @@ const AddDepartment = () => {
         onSubmit={handleCreateDept}
         sx={{ maxWidth: 500, mx: "auto" }}
       >
-        <Typography variant="h4" gutterBottom align="center">
+        <Typography variant="h5" fontWeight={600} gutterBottom>
           Create Department
         </Typography>
 
@@ -94,6 +94,7 @@ const AddDepartment = () => {
           onChange={handleInputs}
           fullWidth
           margin="normal"
+          autoFocus
         />
         {error.dept_name && (
           <Alert severity="error" variant="standard">

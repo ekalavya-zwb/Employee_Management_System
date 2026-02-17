@@ -131,7 +131,7 @@ const AssignProject = () => {
         onSubmit={handleAssignUser}
         sx={{ maxWidth: 500, mx: "auto" }}
       >
-        <Typography variant="h4" gutterBottom align="center">
+        <Typography variant="h5" fontWeight={600} gutterBottom>
           Assign Employee
         </Typography>
 

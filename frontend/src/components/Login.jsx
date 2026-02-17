@@ -99,8 +99,8 @@ const Login = () => {
             width: 400,
             p: 4,
             borderRadius: 3,
-            border: "1px solid #e0e0e0",
-            backgroundColor: "background.paper",
+            border: "1px solid",
+            borderColor: "divider",
           }}
         >
           {loginMutation.isError && (
